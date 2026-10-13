@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 66">
+  <text x="4" y="27" font-family="Poppins,Arial,sans-serif" font-weight="700" font-size="22" letter-spacing="1" fill="#000">AAROGYA</text>
+  <text x="4" y="55" font-family="Poppins,Arial,sans-serif" font-weight="700" font-size="20" letter-spacing="2" fill="#000">PHYSIO</text>
+  <path d="M2 33c14 4 28-2 38-10" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round"/>
+</svg>

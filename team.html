@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meet Our Team — Aarogya Physiotherapy Lucknow</title>
+  <meta name="description" content="Meet the expert physiotherapists at Aarogya Physiotherapy Lucknow — Dr. Arpita Singh and Dr. Muntaha Jafri. Qualified, caring, and dedicated to your recovery.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ---- Team Page Styles ---- */
+    .team-intro { text-align: center; max-width: 720px; margin: 0 auto 56px; }
+    .team-intro p { color: var(--muted); font-size: 16px; line-height: 28px; margin-top: 16px; }
+
+    .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); gap: 40px; }
+    @media (max-width: 500px) { .team-grid { grid-template-columns: 1fr; } }
+
+    .team-card {
+      position: relative;
+      background: var(--white);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+      transition: transform .3s, box-shadow .3s;
+    }
+    .team-card:hover { transform: translateY(-8px); box-shadow: 0 16px 56px rgba(0,0,0,0.14); }
+
+    .team-card__photo-wrap {
+      position: relative;
+      width: 100%;
+      height: 380px;
+      overflow: hidden;
+    }
+    .team-card__photo {
+      width: 100%; height: 100%; object-fit: cover; object-position: top center;
+      background: linear-gradient(135deg, #e0e7ee 0%, #c9d6e0 100%);
+      transition: transform 0.5s ease;
+    }
+    .team-card:hover .team-card__photo { transform: scale(1.04); }
+
+    .team-card__body { padding: 32px; }
+    .team-card__name {
+      font-weight: 700; font-size: 25px; margin-bottom: 6px;
+      background: linear-gradient(135deg, #084056 0%, #0a7a9e 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .team-card__role {
+      font-size: 13.5px; color: #0a7a9e; font-weight: 600; margin-bottom: 16px;
+      text-transform: uppercase; letter-spacing: 0.8px; display: flex; align-items: center; gap: 8px;
+    }
+    .team-card__bio { color: var(--muted); font-size: 14px; line-height: 26px; margin-bottom: 20px; }
+
+    .team-card__skills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+    .team-skill {
+      display: inline-flex; align-items: center; gap: 6px; background: #e8f5e9; color: #1b5e20;
+      font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 20px;
+    }
+    .team-skill i { font-size: 13px; color: #2e7d32; }
+
+    .team-card__cta { display: flex; gap: 12px; flex-wrap: wrap; }
+    .team-card__cta .btn { min-width: auto; min-height: 44px; padding: 10px 20px; font-size: 13.5px; display: inline-flex; align-items: center; gap: 8px; }
+
+    /* ---- Values Section ---- */
+    .values-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; margin-top: 40px; }
+    .value-card {
+      background: var(--white); border-radius: var(--r-lg); padding: 32px 24px; text-align: center;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06); transition: transform .25s, box-shadow .25s;
+    }
+    .value-card:hover { transform: translateY(-5px); box-shadow: 0 12px 32px rgba(8,64,86,0.12); }
+    .value-card__icon-box {
+      width: 64px; height: 64px; border-radius: 16px; margin: 0 auto 16px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .value-card__title { font-weight: 600; font-size: 17.5px; margin-bottom: 8px; color: var(--charcoal); }
+    .value-card__text { color: var(--muted); font-size: 13.5px; line-height: 23px; }
+
+    /* Clinical standards row */
+    .standards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; margin-top: 36px; }
+    .standard-box {
+      background: #f8fafc; border: 1px solid #e2e8f0; border-radius: var(--r-md); padding: 22px;
+      display: flex; gap: 14px; align-items: flex-start;
+    }
+    .standard-box i { font-size: 22px; color: #084056; margin-top: 2px; }
+    .standard-box h4 { font-size: 15px; font-weight: 600; margin-bottom: 4px; color: var(--charcoal); }
+    .standard-box p { font-size: 13px; color: var(--muted); line-height: 20px; margin: 0; }
+  </style>
+</head>
+<body>
+<a class="sr-only" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="logo" href="index.html" aria-label="Aarogya Physiotherapy — home"><span class="logo__mark"></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <div class="nav-group" id="site-menu">
+      <nav class="nav-pill" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="team.html" aria-current="page">Meet the Team</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="nav-phone" href="tel:+917800826015"><img src="assets/img/icon-phone.svg" alt="" width="16" height="16"> +91 78008-26015</a>
+      <a class="btn btn--light btn--nav" href="contact.html">Book an Appointment</a>
+    </div>
+  </div>
+</header>
+<div class="menu-backdrop"></div>
+<main id="main">
+
+<!-- ====== HERO ====== -->
+<section class="hero hero--page hero--page-title hero--tint">
+  <img class="hero__bg" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=75&w=1800" alt="" width="1440" height="554" fetchpriority="high">
+  <div class="logo-glow" aria-hidden="true"><img src="assets/img/hero-glow.svg" alt=""></div>
+  <div class="hero__content">
+    <span class="hero-badge"><i class="fa-solid fa-award"></i> Qualified &amp; Compassionate Experts</span>
+    <h1 class="display">Meet Our Medical Team</h1>
+    <p class="hero__lead" style="max-width:580px">Dedicated physiotherapists providing clinical excellence and personalized home visits across Lucknow.</p>
+  </div>
+</section>
+
+<!-- ====== TEAM INTRO ====== -->
+<section class="section">
+  <div class="container">
+    <div class="team-intro">
+      <p class="eyebrow" style="justify-content:center"><i class="fa-solid fa-stethoscope" style="margin-right:6px"></i> Our Experts</p>
+      <h2 class="h2" style="margin-top:14px">Dedicated Physiotherapists, Compassionate Care</h2>
+      <p>At Aarogya Physiotherapy Lucknow, our team of certified physiotherapists brings deep clinical knowledge, modern rehabilitation techniques, and a compassionate, patient-first philosophy to every treatment session.</p>
+    </div>
+
+    <div class="team-grid">
+
+      <!-- DR. ARPITA SINGH -->
+      <article class="team-card">
+        <div class="team-card__photo-wrap">
+          <img class="team-card__photo" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&crop=faces&q=75&w=600" alt="Dr. Arpita Singh — Senior Physiotherapist at Aarogya Physiotherapy" loading="lazy">
+          <span class="team-card__top-badge"><i class="fa-solid fa-circle-check"></i> Verified Physiotherapist</span>
+        </div>
+        <div class="team-card__body">
+          <h3 class="team-card__name">Dr. Arpita Singh</h3>
+          <p class="team-card__role"><i class="fa-solid fa-user-doctor"></i> Senior Physiotherapist &amp; Sports Rehab Specialist</p>
+
+          <div class="team-stats-row">
+            <div class="team-stat-item">
+              <strong>8+ Yrs</strong>
+              <span>Clinical Exp</span>
+            </div>
+            <div class="team-stat-item">
+              <strong>1,800+</strong>
+              <span>Patients Healed</span>
+            </div>
+            <div class="team-stat-item">
+              <strong style="color:#d97706"><i class="fa-solid fa-star"></i> 4.9</strong>
+              <span>Patient Rating</span>
+            </div>
+          </div>
+
+          <p class="team-card__bio">Dr. Arpita Singh is a distinguished physiotherapist with over 8 years of clinical expertise in musculoskeletal rehabilitation, sports injury management, spine health, and women's pelvic recovery. She combines evidence-backed manual therapy with individualized biomechanical conditioning to get patients pain-free faster.</p>
+
+          <div class="team-card__skills">
+            <span class="team-skill"><i class="fa-solid fa-person-running"></i> Sports Rehab</span>
+            <span class="team-skill"><i class="fa-solid fa-bone"></i> Musculoskeletal</span>
+            <span class="team-skill"><i class="fa-solid fa-person-pregnant"></i> Women's Health</span>
+            <span class="team-skill"><i class="fa-solid fa-hands-holding"></i> Manual Therapy</span>
+            <span class="team-skill"><i class="fa-solid fa-dumbbell"></i> Joint Mobilization</span>
+          </div>
+
+          <div class="team-card__cta">
+            <a class="btn btn--dark" href="https://wa.me/917800826015?text=Hi%2C%20I%27d%20like%20to%20book%20a%20session%20with%20Dr.%20Arpita%20Singh." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Book with Dr. Arpita</a>
+            <a class="btn btn--outline-dark" href="tel:+917800826015"><i class="fa-solid fa-phone"></i> Call Doctor</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- DR. MUNTAHA JAFRI -->
+      <article class="team-card">
+        <div class="team-card__photo-wrap">
+          <img class="team-card__photo" src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&crop=faces&q=75&w=600" alt="Dr. Muntaha Jafri — Physiotherapist at Aarogya Physiotherapy" loading="lazy">
+          <span class="team-card__top-badge"><i class="fa-solid fa-circle-check"></i> Verified Specialist</span>
+        </div>
+        <div class="team-card__body">
+          <h3 class="team-card__name">Dr. Muntaha Jafri</h3>
+          <p class="team-card__role"><i class="fa-solid fa-user-doctor"></i> Neuro &amp; Paediatric Rehabilitation Specialist</p>
+
+          <div class="team-stats-row">
+            <div class="team-stat-item">
+              <strong>7+ Yrs</strong>
+              <span>Clinical Exp</span>
+            </div>
+            <div class="team-stat-item">
+              <strong>1,400+</strong>
+              <span>Patients Healed</span>
+            </div>
+            <div class="team-stat-item">
+              <strong style="color:#d97706"><i class="fa-solid fa-star"></i> 4.9</strong>
+              <span>Patient Rating</span>
+            </div>
+          </div>
+
+          <p class="team-card__bio">Dr. Muntaha Jafri is a specialized rehabilitation physiotherapist focusing on neurological conditions, stroke and paralysis recovery, paediatric developmental physiotherapy, and chest/respiratory rehabilitation. Her gentle, compassionate approach ensures both pediatric and elderly patients regain maximum functional independence.</p>
+
+          <div class="team-card__skills">
+            <span class="team-skill"><i class="fa-solid fa-brain"></i> Neuro Rehab</span>
+            <span class="team-skill"><i class="fa-solid fa-child-reaching"></i> Paediatric Physio</span>
+            <span class="team-skill"><i class="fa-solid fa-lungs"></i> Respiratory Care</span>
+            <span class="team-skill"><i class="fa-solid fa-wheelchair"></i> Paralysis Rehab</span>
+            <span class="team-skill"><i class="fa-solid fa-person-walking"></i> Gait Training</span>
+          </div>
+
+          <div class="team-card__cta">
+            <a class="btn btn--dark" href="https://wa.me/917800826015?text=Hi%2C%20I%27d%20like%20to%20book%20a%20session%20with%20Dr.%20Muntaha%20Jafri." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Book with Dr. Muntaha</a>
+            <a class="btn btn--outline-dark" href="tel:+917800826015"><i class="fa-solid fa-phone"></i> Call Doctor</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== CLINICAL QUALITY STANDARDS ====== -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <p class="eyebrow"><i class="fa-solid fa-certificate" style="margin-right:6px"></i> Quality Guarantee</p>
+      <h2 class="h2">Our Clinical Care Standards</h2>
+    </div>
+    <div class="standards-grid">
+      <div class="standard-box">
+        <i class="fa-solid fa-notes-medical"></i>
+        <div>
+          <h4>Customized Assessments</h4>
+          <p>Comprehensive 45-minute root cause assessment for every new case.</p>
+        </div>
+      </div>
+      <div class="standard-box">
+        <i class="fa-solid fa-pump-medical"></i>
+        <div>
+          <h4>Sterilized Equipment</h4>
+          <p>Medical-grade disinfection for all portable ultrasound and therapy tools.</p>
+        </div>
+      </div>
+      <div class="standard-box">
+        <i class="fa-solid fa-chart-line"></i>
+        <div>
+          <h4>Documented Recovery</h4>
+          <p>Regular milestone tracking so you can visualize pain reduction progress.</p>
+        </div>
+      </div>
+      <div class="standard-box">
+        <i class="fa-solid fa-comments"></i>
+        <div>
+          <h4>Ongoing WhatsApp Support</h4>
+          <p>Direct doctor communication between sessions for posture and exercise guidance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== OUR VALUES ====== -->
+<section class="section section--grey">
+  <div class="container">
+    <div class="section-head section-head--center"><p class="eyebrow"><i class="fa-solid fa-shield-halved" style="margin-right:6px"></i> What Defines Us</p><h2 class="h2">Our Core Values</h2></div>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-card__icon-box" style="background:#e0f2fe;color:#0369a1">
+          <i class="fa-solid fa-microscope" style="font-size:30px"></i>
+        </div>
+        <h3 class="value-card__title">Evidence-Based Practice</h3>
+        <p class="value-card__text">Every therapeutic modality and exercise regimen is grounded in modern clinical science for proven, lasting outcomes.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-card__icon-box" style="background:#ffe4e6;color:#e11d48">
+          <i class="fa-solid fa-heart-pulse" style="font-size:30px"></i>
+        </div>
+        <h3 class="value-card__title">Patient-First Care</h3>
+        <p class="value-card__text">We listen to your pain story, respect your comfort threshold, and adapt treatments to your daily life routine.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-card__icon-box" style="background:#dcfce7;color:#15803d">
+          <i class="fa-solid fa-house-medical" style="font-size:30px"></i>
+        </div>
+        <h3 class="value-card__title">Doorstep Home Visits</h3>
+        <p class="value-card__text">Experience hospital-grade physiotherapy in the comfort and privacy of your home across all major localities in Lucknow.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-card__icon-box" style="background:#fef3c7;color:#b45309">
+          <i class="fa-solid fa-headset" style="font-size:30px"></i>
+        </div>
+        <h3 class="value-card__title">Transparent &amp; Accessible</h3>
+        <p class="value-card__text">Clear pricing, zero hidden charges, and continuous availability on WhatsApp &amp; phone for your complete peace of mind.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CTA ====== -->
+<section class="section">
+  <div class="container" style="text-align:center">
+    <h2 class="h2" style="margin-bottom:16px">Ready to Move Pain-Free Again?</h2>
+    <p class="lead muted" style="max-width:620px;margin:0 auto 32px">Book an in-home evaluation session with Dr. Arpita Singh or Dr. Muntaha Jafri. We travel directly to your location anywhere across Lucknow.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <a class="btn btn--dark" href="https://wa.me/917800826015?text=Hi%20Aarogya%20Physiotherapy%2C%20I%27d%20like%20to%20book%20a%20physiotherapy%20session." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Book via WhatsApp</a>
+      <a class="btn btn--outline-dark" href="tel:+917800826015"><i class="fa-solid fa-phone"></i> Call +91 78008-26015</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="cta-band">
+    <div class="cta-band__item">
+      <h2>Book an Appointment</h2>
+      <p>Discover why we're Lucknow's trusted provider for comprehensive physiotherapy &amp; rehab solutions. Quick, easy booking — personalised care starts here.</p>
+      <a class="btn btn--outline-light btn--sm" href="contact.html">Book an Appointment</a>
+    </div>
+    <div class="cta-band__item">
+      <h2>Service Across Lucknow</h2>
+      <p>We provide home physiotherapy services across all major localities in Lucknow. Contact us to check coverage in your area.</p>
+      <a class="btn btn--outline-light btn--sm" href="services.html#locations">View Covered Areas</a>
+    </div>
+  </div>
+  <div class="cta-band__rule" aria-hidden="true"></div>
+  <div class="container footer-main">
+    <div class="footer-brand">
+      <span class="footer-logo" role="img" aria-label="Aarogya Physiotherapy"></span>
+      <div class="footer-news">
+        <p class="footer-title">Newsletter Signup</p>
+        <p class="footer-note">Stay up to date with physiotherapy tips, exercise guides, and recovery stories.</p>
+        <form class="news-form" data-form data-success="Subscribed. Thank you!" novalidate>
+          <label class="sr-only" for="news-email">Email address</label>
+          <input class="field" id="news-email" name="newsletter_email" type="email" placeholder="Email address" required autocomplete="email">
+          <button type="submit" aria-label="Subscribe"><img src="assets/img/icon-arrow-right.svg" alt="" width="16" height="13"></button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+    <div class="footer-col"><p class="footer-title">Quick Links</p><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="team.html">Meet the Team</a></li><li><a href="services.html">Services</a></li><li><a href="blog.html">Blog</a></li><li><a href="faq.html">FAQs</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+    <div class="footer-col"><p class="footer-title">Opening hours</p><ul class="hours"><li><span>Monday:</span><span>7:00am – 8pm</span></li><li><span>Tuesday:</span><span>7:00am – 8pm</span></li><li><span>Wednesday:</span><span>7:00am – 8pm</span></li><li><span>Thursday:</span><span>7:00am – 8pm</span></li><li><span>Friday:</span><span>7:00am – 8pm</span></li><li><span>Saturday:</span><span>8:00am – 6pm</span></li><li><span>Sunday:</span><span>9:00am – 2pm</span></li></ul></div>
+    <div class="footer-col"><p class="footer-title">Contact info</p>
+      <ul class="footer-contact">
+        <li><img src="assets/img/footer-phone.svg" alt="" width="13" height="13"><a href="tel:+917800826015">+91 78008-26015</a></li>
+        <li><img src="assets/img/footer-mail.svg" alt="" width="14" height="10"><a href="mailto:contact@aarogyaphysiotherapy.com">contact@aarogyaphysiotherapy.com</a></li>
+        <li class="is-address"><img src="assets/img/footer-pin.svg" alt="" width="11" height="15"><span>Lucknow, Uttar Pradesh, India</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom__inner">
+      <p>Copyright &copy; 2025 Aarogya Physiotherapy. All Rights Reserved.</p>
+      <div class="footer-legal"><a href="privacy.html">Privacy Policy</a><a href="#">Terms &amp; Conditions</a><a href="#">Accessibility</a></div>
+      <img class="footer-social" src="assets/img/footer-social.svg" alt="Social media icons" width="128" height="16">
+    </div>
+  </div>
+</footer>
+<div class="float-actions">
+  <a class="float-btn float-btn--wa" href="https://wa.me/917800826015?text=Hi%20Aarogya%20Physiotherapy%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path fill="#fff" d="M16 3C8.800 3 3 8.800 3 16c0 2.300.6 4.500 1.700 6.400L3 29l6.800-1.800A13 13 0 1 0 16 3zm0 23.700c-2 0-3.900-.6-5.500-1.600l-.4-.2-4 1 1.100-3.900-.3-.4A10.700 10.700 0 1 1 16 26.700zm5.900-8c-.3-.2-1.900-.9-2.200-1s-.5-.2-.7.200-.8 1-1 1.2-.4.2-.7.100a8.700 8.700 0 0 1-4.300-3.800c-.3-.6.300-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.500 1.100 2.900 1.200 3.100c.2.200 2.100 3.300 5.200 4.600 1.900.8 2.700.9 3.600.7.600-.1 1.900-.8 2.100-1.500.3-.7.300-1.400.2-1.500l-.5-.3z"/></svg></a>
+  <a class="float-btn float-btn--call" href="tel:+917800826015" aria-label="Call us"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="#fff" d="M6.600 10.800a15 15 0 0 0 6.600 6.600l2.200-2.200a1 1 0 0 1 1-.25 11.400 11.400 0 0 0 3.600.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.500a1 1 0 0 1 1 1c0 1.300.2 2.500.6 3.600a1 1 0 0 1-.25 1z"/></svg></a>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
