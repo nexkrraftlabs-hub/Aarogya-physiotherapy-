@@ -138,7 +138,7 @@ button { cursor: pointer; background: none; border: 0; padding: 0; }
 }
 .logo { display: block; flex: none; }
 .logo__mark {
-  display: block; width: 130px; height: 54px; background: var(--white);
+  display: block; width: 160px; height: 54px; background: var(--white);
   -webkit-mask: url("../assets/img/logo-mask.svg") no-repeat center / contain;
           mask: url("../assets/img/logo-mask.svg") no-repeat center / contain;
 }
@@ -191,7 +191,7 @@ button { cursor: pointer; background: none; border: 0; padding: 0; }
     backdrop-filter: none;
   }
   .menu-toggle { display: block; z-index: 960; }
-  .logo__mark { width: 104px; height: 42px; }
+  .logo__mark { width: 136px; height: 46px; }
 
   .nav-group {
     position: fixed; top: 0; right: 0; bottom: 0; z-index: 950;
