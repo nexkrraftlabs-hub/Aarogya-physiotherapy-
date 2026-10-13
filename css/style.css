@@ -7,6 +7,7 @@
 :root {
   --black: #000;
   --charcoal: #2f2f2f;
+  --teal: #084056;
   --grey: #f6f6f6;
   --muted: #5c5c5c;
   --white: #fff;
@@ -734,8 +735,10 @@ textarea.field { height: 110px; resize: vertical; }
   .cta-band__item { padding: 40px var(--gutter); }
   .cta-band__item + .cta-band__item { border-left: 0; border-top: 1px solid rgba(255, 255, 255, 0.2); }
   .cta-band__item h2 { font-size: 26px; line-height: 30px; }
-  .footer-main { grid-template-columns: 1fr; gap: 36px; }
-  .footer-brand { grid-column: auto; max-width: none; }
+  .footer-main { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 16px; }
+  .footer-brand, .footer-main > .footer-col:last-child { grid-column: 1 / -1; }
+  .footer-brand { max-width: none; }
+  .footer-col { min-width: 0; white-space: normal; }
   .footer-bottom__inner { flex-direction: column; align-items: flex-start; padding-block: 20px; }
   .footer-legal { gap: 8px 24px; }
 
@@ -763,6 +766,11 @@ textarea.field { height: 110px; resize: vertical; }
   display: flex;
   align-items: center;
 }
+.hero--slider .hero__content { z-index: 3; width: min(804px, 100%); gap: 18px; padding-top: 0; }
+.hero--slider .hero__title { font-size: clamp(2.25rem, 5vw, 4rem); line-height: 1.1; font-weight: 600; letter-spacing: -0.03em; text-shadow: 0 2px 18px rgba(0, 0, 0, 0.24); }
+.hero--slider .hero__title span { display: block; }
+.hero--slider .hero__lead { max-width: 440px; font-size: 16px; line-height: 1.75; font-weight: 500; text-shadow: 0 1px 10px rgba(0, 0, 0, 0.4); }
+.hero--slider .hero__lead span { display: block; }
 .hero-slider {
   position: absolute;
   inset: 0;
@@ -806,19 +814,37 @@ textarea.field { height: 110px; resize: vertical; }
 }
 @media (max-width: 600px) {
   .hero--slider {
-    min-height: 0;
+    min-height: 600px;
     height: auto;
-    aspect-ratio: 3 / 2;
-    background: #071822;
   }
   .hero-slide,
   .hero-slide.is-active { transform: none; }
-  .hero-slide__bg { object-fit: contain; }
+  .hero-slide__bg { object-fit: cover; }
+  .hero--slider .hero__content { gap: 15px; }
+  .hero--slider .hero__content .eyebrow { justify-content: center; font-size: 10px; letter-spacing: 1.5px; }
+  .hero--slider .hero__title { font-size: clamp(2.2rem, 10vw, 3rem); }
+  .hero--slider .hero__lead { max-width: 320px; font-size: 14px; line-height: 1.7; }
+  .hero--slider .hero__content .btn { margin-top: 4px; }
 }
 
-/* =========================================================
-   Font Awesome Enhancements across Services, Team & Features
-   ========================================================= */
+  /* Home-page marquee */
+  .home-marquee { overflow: hidden; padding-block: 19px; color: var(--white); background: var(--teal); }
+  .home-marquee__track { display: flex; width: max-content; animation: home-marquee-scroll 34s linear infinite; }
+  .home-marquee__group { display: flex; flex: none; align-items: center; gap: 30px; padding-inline: 30px; white-space: nowrap; }
+  .home-marquee__group > span:not(.home-marquee__dot) { font-size: 14px; line-height: 20px; font-weight: 500; letter-spacing: 0.04em; }
+  .home-marquee__dot { width: 7px; height: 7px; flex: none; border-radius: 50%; background: var(--white); opacity: 0.75; }
+  .home-marquee:hover .home-marquee__track { animation-play-state: paused; }
+  @keyframes home-marquee-scroll { to { transform: translateX(-50%); } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .home-marquee__track { width: 100%; animation: none; }
+    .home-marquee__group { flex-wrap: wrap; justify-content: center; min-width: 0; white-space: normal; }
+    .home-marquee__group:nth-child(2) { display: none; }
+  }
+
+  /* =========================================================
+     Font Awesome Enhancements across Services, Team & Features
+     ========================================================= */
 .svc-card__icon-header {
   display: flex;
   align-items: center;
