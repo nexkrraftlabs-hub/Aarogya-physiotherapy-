@@ -809,7 +809,7 @@ textarea.field { height: 110px; resize: vertical; }
               radial-gradient(circle at 50% 40%, rgba(10, 122, 158, 0.18) 0%, transparent 60%);
   z-index: 1;
 }
-.hero--slider .hero__content .btn { position: relative; top: 20px; }
+.hero--slider .hero__content .btn { position: relative; top: 60px; }
 @media (max-width: 900px) {
   .hero--slider { min-height: 640px; }
 }
@@ -825,7 +825,7 @@ textarea.field { height: 110px; resize: vertical; }
   .hero--slider .hero__content .eyebrow { justify-content: center; font-size: 10px; letter-spacing: 1.5px; }
   .hero--slider .hero__title { font-size: clamp(2.2rem, 10vw, 3rem); }
   .hero--slider .hero__lead { max-width: 320px; font-size: 14px; line-height: 1.7; }
-  .hero--slider .hero__content .btn { top: 16px; }
+  .hero--slider .hero__content .btn { top: 45px; }
 }
 
   /* Home-page marquee */
