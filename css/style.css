@@ -1230,3 +1230,122 @@ textarea.field { height: 110px; resize: vertical; }
     height: 26px !important;
   }
 }
+
+/* =========================================================
+   Home — Dr. Arpita Singh feature
+   ========================================================= */
+.arpita-feature {
+  overflow: hidden;
+  background: var(--grey);
+}
+.arpita-feature__intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: clamp(40px, 8vw, 112px);
+}
+.arpita-feature__photos {
+  position: relative;
+  min-height: clamp(380px, 44vw, 520px);
+  isolation: isolate;
+}
+.arpita-feature__portrait {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--r-lg);
+  object-fit: cover;
+  object-position: center 25%;
+}
+.arpita-feature__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+}
+.arpita-feature__text .eyebrow { color: var(--teal); }
+.arpita-feature__role {
+  color: var(--teal);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.arpita-feature__text .lead { max-width: 520px; }
+.arpita-feature__text .btn { margin-top: 4px; }
+.arpita-feature__videos {
+  margin-top: clamp(56px, 8vw, 96px);
+  padding: clamp(28px, 5vw, 56px);
+  border-radius: var(--r-lg);
+  color: var(--white);
+  background: var(--teal);
+}
+.arpita-feature__videos .eyebrow { color: var(--white); }
+.arpita-feature__videos-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+.arpita-feature__videos-head .section-head { gap: 10px; }
+.arpita-feature__videos-head > p {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 14px;
+  line-height: 22px;
+}
+.arpita-video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 292px));
+  justify-content: center;
+  gap: 24px;
+}
+.arpita-video:first-child {
+  grid-column: 1 / -1;
+  width: min(100%, 478px);
+  margin-inline: auto;
+}
+.arpita-video {
+  min-width: 0;
+  overflow: hidden;
+  border-radius: var(--r-md);
+  background: var(--white);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+.arpita-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 16;
+  object-fit: contain;
+  background: var(--charcoal);
+}
+.arpita-video:first-child video { aspect-ratio: 16 / 9; }
+.arpita-video figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 13px 15px;
+  color: var(--charcoal);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+.arpita-video figcaption span { color: var(--teal); }
+
+@media (max-width: 900px) {
+  .arpita-feature__intro { gap: 40px; }
+  .arpita-feature__photos { min-height: clamp(340px, 48vw, 440px); }
+}
+
+@media (max-width: 600px) {
+  .arpita-feature__intro { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .arpita-feature__photos { min-height: min(92vw, 380px); }
+  .arpita-feature__text { gap: 14px; }
+  .arpita-feature__text .btn { width: 100%; }
+  .arpita-feature__videos-head { align-items: flex-start; flex-direction: column; gap: 10px; }
+  .arpita-feature__videos { padding: 22px 16px; }
+  .arpita-video-grid { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .arpita-video { width: min(100%, 478px); margin-inline: auto; }
+}
