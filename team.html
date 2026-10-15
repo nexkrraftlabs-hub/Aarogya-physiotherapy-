@@ -39,6 +39,8 @@
       background: linear-gradient(135deg, #e0e7ee 0%, #c9d6e0 100%);
       transition: transform 0.5s ease;
     }
+    .team-card__photo-wrap--portrait { background: #f1f4f3; }
+    .team-card__photo-wrap--portrait .team-card__photo { object-fit: contain; object-position: center; }
     .team-card:hover .team-card__photo { transform: scale(1.04); }
 
     .team-card__body { padding: 32px; }
@@ -63,6 +65,7 @@
 
     .team-card__cta { display: flex; gap: 12px; flex-wrap: wrap; }
     .team-card__cta .btn { min-width: auto; min-height: 44px; padding: 10px 20px; font-size: 13.5px; display: inline-flex; align-items: center; gap: 8px; }
+    .team-card__cta .btn--call-small { align-self: center; width: auto; max-width: none; min-height: 36px; padding: 7px 12px; font-size: 12px; }
 
     /* ---- Values Section ---- */
     .values-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; margin-top: 40px; }
@@ -181,8 +184,8 @@
 
       <!-- DR. MUNTAHA JAFRI -->
       <article class="team-card">
-        <div class="team-card__photo-wrap">
-          <img class="team-card__photo" src="assets/WhatsApp Image 2026-10-14 at 9.50.03 PM.jpeg" alt="Physiotherapist at a community health event at Integral University" width="1024" height="768" loading="lazy">
+        <div class="team-card__photo-wrap team-card__photo-wrap--portrait">
+          <img class="team-card__photo" src="assets/WhatsApp Image 2026-10-15 at 5.30.53 PM.jpeg" alt="Dr. Muntaha Jafri, physiotherapist at Integral University" width="960" height="1280" loading="lazy">
           <span class="team-card__top-badge"><i class="fa-solid fa-circle-check"></i> Verified Specialist</span>
         </div>
         <div class="team-card__body">
@@ -216,7 +219,7 @@
 
           <div class="team-card__cta">
             <a class="btn btn--dark" href="https://wa.me/917800826015?text=Hi%2C%20I%27d%20like%20to%20book%20a%20session%20with%20Dr.%20Muntaha%20Jafri." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Book with Dr. Muntaha</a>
-            <a class="btn btn--outline-dark" href="tel:+917800826015"><i class="fa-solid fa-phone"></i> Call Doctor</a>
+            <a class="btn btn--outline-dark btn--call-small" href="tel:+918853960360" aria-label="Call Dr. Muntaha Jafri at +91 88539 60360"><i class="fa-solid fa-phone" aria-hidden="true"></i> +91 88539 60360</a>
           </div>
         </div>
       </article>
