@@ -471,10 +471,10 @@ textarea.field { height: 110px; resize: vertical; }
 .footer-main { display: grid; grid-template-columns: 278px repeat(3, auto); justify-content: space-between; column-gap: 40px; padding-block: 57px 70px; }
 .footer-brand { display: flex; flex-direction: column; gap: 23px; }
 .footer-logo {
-  display: block; width: 160px; height: 66px; background: var(--white);
-  -webkit-mask: url("../assets/img/logo-footer-mask.svg") no-repeat center / contain;
-          mask: url("../assets/img/logo-footer-mask.svg") no-repeat center / contain;
+  display: none;
 }
+.footer-brand-text { font-size: 15px; font-weight: 600; letter-spacing: 0.04em; color: var(--white); margin-bottom: 4px; }
+.footer-brand-sub { font-size: 11px; color: var(--white); opacity: 0.9; margin-bottom: 10px; }
 .footer-title { font-size: 19px; line-height: 23px; letter-spacing: -0.03em; }
 .footer-note { font-size: 12px; line-height: 20px; letter-spacing: -0.01em; }
 .footer-news { display: flex; flex-direction: column; gap: 13px; }
