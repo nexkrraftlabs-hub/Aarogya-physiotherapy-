@@ -136,12 +136,13 @@ button { cursor: pointer; background: none; border: 0; padding: 0; }
   display: flex; align-items: center; justify-content: space-between;
   padding-inline: clamp(20px, 3.1vw, 45px);
 }
-.logo { display: block; flex: none; }
+.logo { display: flex; flex-direction: column; align-items: flex-start; flex: none; gap: 4px; }
 .logo__mark {
   display: block; width: 160px; height: 54px; background: var(--white);
   -webkit-mask: url("../assets/img/logo-mask.svg") no-repeat center / contain;
           mask: url("../assets/img/logo-mask.svg") no-repeat center / contain;
 }
+.logo__text { display: block; font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--white); }
 
 .nav-group { display: flex; align-items: center; gap: 24px; margin-inline: auto; }
 .nav-pill {
