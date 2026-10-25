@@ -1,4 +1,4 @@
-/* Aarogya Physiotherapy — shared behaviour */
+/* Ojas Physiotherapy — shared behaviour */
 (function () {
   "use strict";
 
@@ -191,7 +191,7 @@
         return;
       }
 
-      var waText = "Hello Aarogya Physiotherapy!%0A%0A";
+      var waText = "Hello Ojas Physiotherapy!%0A%0A";
       if (name) waText += "Name: " + encodeURIComponent(name) + "%0A";
       if (email) waText += "Email: " + encodeURIComponent(email) + "%0A";
       if (phone) waText += "Phone: " + encodeURIComponent(phone) + "%0A";
@@ -292,3 +292,4 @@
     });
   }
 })();
+

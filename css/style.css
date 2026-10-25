@@ -1,5 +1,5 @@
 /* =========================================================
-   Aarogya Physiotherapy — shared styles
+   Ojas Physiotherapy — shared styles
    Built from Figma (1440px frame) + mobile responsive.
    Breakpoints: 1100 (nav drawer) / 900 (tablet) / 600 (mobile)
    ========================================================= */
@@ -1350,3 +1350,4 @@ textarea.field { height: 110px; resize: vertical; }
   .arpita-video-grid { grid-template-columns: minmax(0, 1fr); gap: 18px; }
   .arpita-video { width: min(100%, 478px); margin-inline: auto; }
 }
+
